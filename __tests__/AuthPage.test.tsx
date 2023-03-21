@@ -144,9 +144,9 @@ describe('AdminPage Test Cases', () => {
     userEvent.type(screen.getByPlaceholderText('Username'), 'user1');
     userEvent.type(screen.getByPlaceholderText('Password'), 'password');
     userEvent.click(screen.getByText('Create new user'));
-    screen.debug();
+    // screen.debug();
     expect(await screen.findByText('blog page')).toBeInTheDocument();
-    screen.debug();
+    // screen.debug();
   });
 
   it('サインアップ失敗時にはページ遷移しない', async () => {
