@@ -75,6 +75,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
+// build時にapiから記事を作成しておく。
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const post = await getPostData(ctx.params.id as string);
   return {
